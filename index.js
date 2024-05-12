@@ -1,11 +1,12 @@
-const express = require('express');
-const app = express();
-const rutas = require('./routes/ruta');
-const port = 3000; // Define el puerto del servidor
+const http = require('http');
+const PORT = 3000;
 
-app.use('/', rutas);
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World!');
+});
 
-// Inicia el servidor
-app.listen(port, () => {
-  console.log(`Servidor API escuchando en el puerto ${port}`);
+server.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}/`);
 });

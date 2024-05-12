@@ -1,16 +1,13 @@
 {
-  "name": "prueba-node",
+  "name": "nodejs-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A minimal Node.js web application.",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": "alphasec",
+  "license": "MIT",
+   "dependencies": {
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.19.2"
+  "scripts": {
+    "start": "node index.js"
   }
 }
