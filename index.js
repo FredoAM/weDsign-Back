@@ -1,8 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const invitacionesRouter = require('./routes/invitaciones');
-const usuariosRouter = require('./routes/usuarios'); 
+const invitationsRouter = require('./routes/invitations');
+const usersRouter = require('./routes/users'); 
 
 const app = express();
 const PORT = 3001;
@@ -10,9 +10,9 @@ const PORT = 3001;
 app.use(cors());
 app.use(bodyParser.json());
 
-app.use('/invitaciones', invitacionesRouter);
-app.use('/login', usuariosRouter); 
+app.use('/invitations', invitationsRouter);
+app.use('/login', usersRouter); 
 
 app.listen(PORT, () => {
-  console.log(`Servidor escuchando en el puerto ${PORT}`);
+  console.log(`Listening on port ${PORT}`);
 });
