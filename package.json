@@ -1,21 +1,12 @@
 {
-  "name": "server",
+  "name": "nodejs-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A minimal Node.js web application.",
   "main": "index.js",
+  "author": "alphasec",
+  "license": "MIT",
   "scripts": {
-    "start": "node index.js",
-    "dev":"nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.20.2",
-    "cors": "^2.8.5",
-    "express": "^4.19.1",
-    "mysql2": "^3.9.2",
-    "nodemon": "^3.1.0",
-    "sequelize": "^6.37.1"
-  }
+  "keywords": []
 }
