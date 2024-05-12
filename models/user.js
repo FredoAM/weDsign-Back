@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('mysql://root:sLcJqqWTAgGWPEXcgkaMfkxokDmcNwna@monorail.proxy.rlwy.net:39672/railway?statusColor=&env=development&name=wedsign&tLSMode=0&usePrivateKey=false&safeModeLevel=0&advancedSafeModeLevel=0&driverVersion=0&showSystemSchemas=0&lazyLoadItems=0');
+const sequelize = new Sequelize('mysql://root:sLcJqqWTAgGWPEXcgkaMfkxokDmcNwna@monorail.proxy.rlwy.net:39672/railway?statusColor=&env=development&name=wedsign&tLSMode=0&usePrivateKey=false&safeModeLevel=0&advancedSafeModeLevel=0&driverVersion=0&showSystemSchemas=0');
 
 const User = sequelize.define('User', {
   id: {
