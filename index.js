@@ -10,6 +10,10 @@ const PORT = 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.send('¡Hola desde la API Node.js con Express!');
+});
+
 app.use('/invitations', invitationsRouter);
 app.use('/login', usersRouter); 
 
