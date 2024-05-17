@@ -1,12 +1,20 @@
-const http = require('http');
-const PORT = 3000;
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const invitationsRouter = require('./routes/invitations');
+const usersRouter = require('./routes/users'); 
+require('dotenv').config();
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World!');
-});
 
-server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
+const PORT = process.env.PORT || 3000;
+const app = express();
+
+app.use(cors());
+app.use(bodyParser.json());
+
+app.use('/invitations', invitationsRouter);
+app.use('/login', usersRouter); 
+
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`);
 });
